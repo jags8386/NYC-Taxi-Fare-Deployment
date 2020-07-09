@@ -64,7 +64,7 @@ def predict():
     prediction = model.predict(data)
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Your Cab Fare should be ${}'.format(output))
+    return render_template('index.html', prediction_text='Total Distance is : {} miles.\n Your Cab Fare should be ${}'.format(int(distance_in_miles), output))
     # return render_template('index.html', prediction_text='day night vector {}'.format(distance))
 
 
