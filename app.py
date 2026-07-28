@@ -30,7 +30,7 @@ def predict():
     # minute = date.strftime("%M")
     # print(datetime.time(6, 30, 00))
     # x = datetime.time(int(hour), int(minute), 00)
-    weekday = int(date.strftime("%w"))
+    weekday = date.weekday()
     # print(weekday)
     pickup = str(request.form["pickup"])
     pickup = geolocator.geocode(pickup)
@@ -68,5 +68,5 @@ def predict():
     # return render_template('index.html', prediction_text='day night vector {}'.format(distance))
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
